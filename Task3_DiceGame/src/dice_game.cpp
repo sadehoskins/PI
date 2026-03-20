@@ -39,7 +39,7 @@ void DiceGame::GameRound() {
 
 void DiceGame::ShowScore() const {
 	std::cout << "Your Score: " << player_score_
-		<< " | Computer Score: " << computer_score_; "\n";
+		<< " | Computer Score: " << computer_score_ << "\n";
 }
 
 void DiceGame::ChangeDice(int new_sides) {
@@ -52,7 +52,7 @@ int DiceGame::sides() const {
 }
 
 bool DiceGame::is_running() const {
-	return is_running;
+	return is_running_;
 }
 
 void DiceGame::Quit() {

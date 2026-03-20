@@ -34,7 +34,28 @@ int main() {
 	while (game.is_running()) {
 		std::cout << "\n[R]oll | [C]hange dice | [Q]uit ";
 		char choice = '\0';
+		std::cin >> choice;
 
-		switch 
+		switch (choice) {
+			case 'r' : case 'R' : 
+				game.GameRound();
+				game.ShowScore();
+				break;
+			case 'c': case 'C': {
+				int new_sides = PromptForSides();
+				game.ChangeDice(new_sides);
+				break;
+			}
+			case 'q' : case 'Q' :
+				game.Quit();
+				break;
+			default:
+				std::cout << "Invalid option. \n";
+				break;
+		}
 	}
+	std::cout << "\n *** FINAL SCORE ***\n";
+	game.ShowScore();
+	std::cout << "Thanks for playing!\n"
+		<< "See you next time!\n";
 }
