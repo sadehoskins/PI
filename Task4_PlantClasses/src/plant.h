@@ -5,11 +5,12 @@
 
 class Plant {
 	public:
-		Plant(const std::string& name, double growth_rate, float root_length, std::string leaf_color,
-			float seed_diameter);
-
+		
+		Plant(const std::string& name, double growth_rate, float root_length, const std::string& leaf_color, float seed_diameter);
+		
 		// t = time plant grows
 		virtual double CalculateHeight(double t) const = 0;
+		
 		void DisplayInfo() const;
 
 		// getters
@@ -25,7 +26,7 @@ class Plant {
 	private:
 		std::string name_;
 		double growth_rate_;
-		float root_lenght_;
+		float root_length_;
 		std::string leaf_color_;
 		float seed_diameter_;
 };
