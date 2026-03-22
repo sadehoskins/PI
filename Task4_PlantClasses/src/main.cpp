@@ -46,7 +46,7 @@ int ReadIntInRange(const std::string& prompt, int min_val, int max_val) {
 			std::cout << "Invalid input. Please choose a number between " << min_val << "and " << max_val << "!" << std::endl;
 		}
 		else {
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max()), '\n';
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			return value;
 		}
 	}
