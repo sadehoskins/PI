@@ -69,7 +69,7 @@ namespace car {
     }
 
     void BaseCar::PrintStatus() {
-        std::cout << "\n=== " << car_type() << " Status ===\n"
+        std::cout << "\n++++++++++++++++++ " << car_type() << " Status ++++++++++++++++++\n"
             << "Engine:     " << engine_->engine_type()
             << " (" << engine_->horsepower() << " HP)"
             << (is_engine_on_ ? " [ON]" : " [OFF]") << "\n"
@@ -84,8 +84,7 @@ namespace car {
             << "Suspension: " << suspension_->suspension_type()
             << "\n"
             << "Speed:      " << std::fixed << std::setprecision(1)
-            << current_speed_ << " km/h\n"
-            << "===========================\n\n";
+            << current_speed_ << " km/h\n";
     }
 
     double BaseCar::CalculateAcceleration() const {

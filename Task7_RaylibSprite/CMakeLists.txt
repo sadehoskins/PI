@@ -1,21 +1,21 @@
-﻿cmake_minimum_required(VERSION 3.24)
+﻿# Task 7: Raylib Sprite Class (needs raylib)
+add_executable(Task7_RaylibSprite
+    src/main.cpp
+    src/sprite.h
+    src/sprite.cpp
+)
 
-project(PI)
+target_include_directories(Task7_RaylibSprite PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
 
-# ---- Global C++ settings (applies to all tasks) ----
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+# Link raylib (fetched at root level)
+target_link_libraries(Task7_RaylibSprite PRIVATE raylib)
 
-# ---- Fetch raylib once for all tasks ----
-include(cmake/raylib.cmake)
+# Copy assets to build directory
+add_custom_command(TARGET Task7_RaylibSprite POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/assets
+    $<TARGET_FILE_DIR:Task7_RaylibSprite>/assets
+)
 
-# ---- Add each task as a subdirectory ----
-# Uncomment as you create each task
-add_subdirectory(Task2_SpriteStruct)
-add_subdirectory(Task3_DiceGame)
-# add_subdirectory(Task4_PlantClasses)
-# add_subdirectory(Task5_CustomArray)
-# add_subdirectory(Task6_VehicleSim)
-# add_subdirectory(Task7_RaylibSprite)
-# add_subdirectory(Task8_LevelClass)

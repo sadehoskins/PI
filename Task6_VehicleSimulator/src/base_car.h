@@ -13,15 +13,16 @@
 #include "wheels/wheels.h"
 
 // Base class defines interface for all car types
+namespace car {
 
 class BaseCar {
 	public:
-		BaseCar(std::shared_ptr<component>::Engine > engine,
-			std::shared_ptr<component>::Gears > gears,
-			std::shared_ptr<component>::Wheels > wheels,
-			std::shared_ptr<component>::Brakes > brakes,
-			std::shared_ptr<component>::Frame > frame,
-			std::shared_ptr<component>::Suspension > suspension);
+		BaseCar(std::shared_ptr<component::Engine> engine,
+			std::shared_ptr<component::Gears> gears,
+			std::shared_ptr<component::Wheels> wheels,
+			std::shared_ptr<component::Brakes> brakes,
+			std::shared_ptr<component::Frame> frame,
+			std::shared_ptr<component::Suspension> suspension);
 		virtual ~BaseCar() = default;
 
 		virtual void Accelerate() = 0;

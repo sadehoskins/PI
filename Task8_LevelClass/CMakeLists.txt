@@ -1,9 +1,9 @@
-﻿# Task 8: Level Class (needs raylib + reuses Sprite from Task7)
+﻿# Task 8: Level Class (raylib)
 add_executable(Task8_LevelClass
     src/main.cpp
     src/level.h
     src/level.cpp
-    # Reuse Sprite class from Task7
+    # Reuse sprite class task 7
     ${CMAKE_SOURCE_DIR}/Task7_RaylibSprite/src/sprite.h
     ${CMAKE_SOURCE_DIR}/Task7_RaylibSprite/src/sprite.cpp
 )
@@ -20,3 +20,4 @@ add_custom_command(TARGET Task8_LevelClass POST_BUILD
     ${CMAKE_SOURCE_DIR}/assets
     $<TARGET_FILE_DIR:Task8_LevelClass>/assets
 )
+

@@ -3,12 +3,12 @@
 #include <cmath>
 #include <iomanip>
 
-#include "v6_engine.h"
-#include "manual_gears.h"
-#include "sport_wheels.h"
-#include "disc_brakes.h"
-#include "monocoque_frame.h"
-#include "coilover_suspension.h"
+#include "engine/v6_engine.h"
+#include "gears/manual_gears.h"
+#include "wheels/sport_wheels.h"
+#include "brakes/disc_brakes.h"
+#include "frame/monocoque_frame.h"
+#include "suspension/coilover_suspension.h"
 
 namespace car {
 

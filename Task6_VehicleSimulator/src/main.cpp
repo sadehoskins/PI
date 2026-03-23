@@ -27,7 +27,7 @@ int ReadChoice(int min, int max) {
 
 // Select and create concrete car
 std::shared_ptr<car::BaseCar> CreateCar() {
-    std::cout << "\n============================\n"
+    std::cout << "\n**********************\n"
         << "  Available Cars:\n"
         << "  1. SportsCar (V6 Engine, Manual Gears,\n"
         << "     Sport Wheels, Disc Brakes,\n"
@@ -35,8 +35,8 @@ std::shared_ptr<car::BaseCar> CreateCar() {
         << "  2. SUV (Electric Motor, Automatic Gears,\n"
         << "     Off-Road Wheels, Drum Brakes,\n"
         << "     Ladder Frame, Air Suspension)\n"
-        << "============================\n"
-        << "Select a car (1-2): ";
+        << "**********************\n"
+        << "Select a car: 1 or 2): ";
 
     int choice = ReadChoice(1, 2);
     std::shared_ptr<car::BaseCar> sp_car;
@@ -113,7 +113,7 @@ void ControlLoop(std::shared_ptr<car::BaseCar>& sp_car) {
 
 int main() {
     std::cout << "*************************************\n"
-        << "  Task 6 — Vehicle Simulation\n"
+        << "Vehicle Simulation\n"
         << "*************************************\n";
 
     std::shared_ptr<car::BaseCar> sp_car = CreateCar();

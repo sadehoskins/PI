@@ -1,4 +1,4 @@
-ifndef TASK6_V6_ENGINE_H_
+#ifndef TASK6_V6_ENGINE_H_
 #define TASK6_V6_ENGINE_H_
 
 #include "engine.h"

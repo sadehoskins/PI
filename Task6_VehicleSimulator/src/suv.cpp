@@ -3,12 +3,12 @@
 #include <cmath>
 #include <iomanip>
 
-#include "electric_motor.h"
-#include "automatic_gears.h"
-#include "off_road_wheels.h"
-#include "drum_brakes.h"
-#include "ladder_frame.h"
-#include "air_suspension.h"
+#include "engine/electric_motor.h"
+#include "gears/automatic_gears.h"
+#include "wheels/off_road_wheels.h"
+#include "brakes/drum_brakes.h"
+#include "frame/ladder_frame.h"
+#include "suspension/air_suspension.h"
 
 namespace car {
 
