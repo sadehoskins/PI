@@ -1,0 +1,50 @@
+﻿# Task 6: VehicleSimulator (console only)
+add_executable(Task6_VehicleSimulator
+    src/main.cpp
+    src/base_car.h
+    src/base_car.cpp
+    src/sports_car.h
+    src/sports_car.cpp
+    src/suv.h
+    src/suv.cpp
+    src/brakes/brakes.h
+    src/brakes/brakes.cpp
+    src/brakes/disc_brakes.h
+    src/brakes/disc_brakes.cpp
+    src/brakes/drum_brakes.h
+    src/brakes/drum_brakes.cpp
+    src/engine/engine.h
+    src/engine/engine.cpp
+    src/engine/v6_engine.h
+    src/engine/v6_engine.cpp
+    src/engine/electric_motor.h
+    src/engine/electric_motor.cpp
+    src/frame/frame.h
+    src/frame/frame.cpp
+    src/frame/ladder_frame.h
+    src/frame/ladder_frame.cpp
+    src/frame/monocoque_frame.h
+    src/frame/monocoque_frame.cpp
+    src/gears/gears.h
+    src/gears/gears.cpp
+    src/gears/manual_gears.h
+    src/gears/manual_gears.cpp
+    src/gears/automatic_gears.h
+    src/gears/automatic_gears.cpp
+    src/suspension/air_suspension.h
+    src/suspension/air_suspension.cpp
+    src/suspension/coilover_suspension.h
+    src/suspension/coilover_suspension.cpp
+    src/suspension/suspension.h
+    src/suspension/suspension.cpp
+    src/wheels/wheels.h
+    src/wheels/wheels.cpp
+    src/wheels/sport_wheels.h
+    src/wheels/sport_wheels.cpp
+    src/wheels/off_road_wheels.h
+    src/wheels/off_road_wheels.cpp
+)
+
+target_include_directories(Task6_VehicleSimulator PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)

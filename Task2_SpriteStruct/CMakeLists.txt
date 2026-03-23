@@ -1,4 +1,4 @@
-﻿# Task 2: Sprite Structure (console only, no raylib needed)
+﻿# Task 2: Sprite Structure (console only)
 add_executable(Task2_SpriteStruct
     src/main.cpp
 )
