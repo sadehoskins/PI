@@ -9,10 +9,10 @@ target_include_directories(Task7_RaylibSprite PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-# Link raylib (fetched at root level)
+# Link raylib
 target_link_libraries(Task7_RaylibSprite PRIVATE raylib)
 
-# Copy assets to build directory
+# Copy to build directory
 add_custom_command(TARGET Task7_RaylibSprite POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
     ${CMAKE_SOURCE_DIR}/assets
